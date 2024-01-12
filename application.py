@@ -5,11 +5,11 @@ from requests.exceptions import RequestException
 
 app = Flask(__name__)
 
-# プロキシ認証情報を設定 ローカルデバッグ時
-proxies = {
-    "http": "http://sera:Ej3AR1MH,<@172.16.1.23:15080",
-    "https": "http://sera:Ej3AR1MH,<@172.16.1.23:15080"
-}
+## プロキシ認証情報を設定 ローカルデバッグ時
+#proxies = {
+#    "http": "http://sera:Ej3AR1MH,<@172.16.1.23:15080",
+#    "https": "http://sera:Ej3AR1MH,<@172.16.1.23:15080"
+#}
 
 # APIの呼び出しURL
 api_url = 'https://hekchat-api-managementservice.azure-api.net/openai/'
@@ -46,7 +46,7 @@ def chat():
 #          , data=user_message
 #          , data="Please teach me highest japanese mountain"
           , headers=headers
-          , proxies=proxies  # プロキシを指定 ローカルデバッグ時
+#          , proxies=proxies  # プロキシを指定 ローカルデバッグ時
         )
 
         # デバッグ
